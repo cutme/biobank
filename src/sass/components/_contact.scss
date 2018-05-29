@@ -1,0 +1,52 @@
+.c-contact {
+    .o-list {
+    
+        a {
+            @extend %ulink;
+            
+            &:after, &:before {
+                background-color: white;
+            }
+        }
+
+        dd {
+            border-bottom: 1px solid white;
+        }
+        
+        p {
+            margin-bottom: 4px;
+        }        
+        
+        .o-header {
+            &__secondary {
+                margin-bottom: 10px;
+            }
+        }
+        
+        .u-borderline {
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+
+                &:after {
+                    background-color: white;
+                }
+            }
+        }
+        
+        &__item {
+            &:last-child {
+                
+
+                dd {
+                    border: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    
+}

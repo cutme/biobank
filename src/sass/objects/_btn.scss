@@ -1,0 +1,58 @@
+.o-btn {
+    @extend %anim;
+    @extend %flex-xy;
+    @extend %rel;
+    @extend %ulink;
+    height: 36px;
+    display: inline-flex;
+    text: {
+        align: center;
+        decoration: none;
+    }
+    font-size: rem(14);
+    padding: 0 20px;
+    line-height: 1;
+    overflow: hidden;    
+    
+    &:after, &:before {
+        z-index: -1;
+    }
+
+    &:before {
+        bottom: 0;
+        height: 100%;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+   
+    &--outline {
+        border: 1px solid white;
+        border-radius: 18px;
+    }
+    
+    &--blue {
+        border-color: $c-blue;
+    }
+    
+    &--gray {
+        border-color: $c-gray;
+        
+        &:after, &:before {
+            background-color: $c-gray;
+        }
+    }
+    
+    &--white {
+        
+        &:after, &:before {
+            background-color: white;
+        }
+
+        &:hover {
+            color: $c-navy;
+        }
+    }
+}

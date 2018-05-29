@@ -1,0 +1,118 @@
+.c-how {
+
+    i {
+        font-size: rem(220);
+    }
+
+    &__icon {
+        @extend %rel;
+        margin-bottom: 60px;
+        text-align: center;
+        
+        &:after, &:before {
+            @extend %anim-slow;
+            width: 60px;
+            height: 11px;
+            background-color: $c-blue;
+            border-radius: 10px;
+            transform: scale3d(0, 1, 1);
+        }
+        
+        &:after {
+            @extend %abs;
+            @extend %abs-y;
+            @extend %abs-after;
+            left: calc(100% - 20px);
+            transform-origin: left;
+        }
+        
+        &.anim--loaded {
+            &:after {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    }
+
+    &__item {
+        @extend %rel;
+        width: 280px;
+        
+        &:nth-child(1) {
+            transition-delay: 100ms;
+        }
+        
+        &:nth-child(2) {
+            transition-delay: 200ms;
+        }
+        
+        &:nth-child(3) {
+            transition-delay: 300ms;
+        }
+        
+        &:nth-child(4) {
+            transition-delay: 400ms;
+        }
+        
+        &:not(:last-child) {
+            margin-right: 20px;
+        }        
+        
+        &:before {
+            @extend %abs;
+            z-index: -1;
+            left: 0; bottom: 0;
+            width: 100%;
+            text-align: center;
+            line-height: 1;
+            font: {
+                family: $axiforma;
+                size: rem(240);
+                weight: $bold;
+            }
+            counter-increment: sekcja;
+            content: counter(sekcja);
+            color: rgba($c-blue, .2);
+        }
+        
+        &:first-child {
+            .c-how__icon {
+                &:before {
+                    @extend %abs;
+                    @extend %abs-y;
+                    @extend %abs-after;
+                    right: calc(100% - 20px);
+                }
+                
+                &.anim--loaded {
+                    &:before {
+                        width: 1000px;
+                        transform: scale3d(1, 1, 1);
+                    }
+                }
+            }
+        }
+        
+        &:last-child {
+            .c-how__icon {
+                &:after {
+                    width: 1000px;
+                }
+            }
+        }
+    }
+
+
+    &__list {
+        @extend %flex;
+        @extend %flex-wrap;
+        counter-reset: sekcja; 
+    }
+    
+    .o-header {
+        &__secondary {
+            margin-bottom: 10px;
+        }
+    }
+    
+    
+}

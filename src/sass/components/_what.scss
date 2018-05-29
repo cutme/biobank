@@ -1,0 +1,105 @@
+.c-what {
+    @extend %rel;
+    background-color: $c-navy;
+    padding-bottom: 75px;
+    color: white;
+    
+    &__content {
+        @extend %flex;
+        @extend %flex-wrap;
+        margin-bottom: 100px;
+        padding-left: 100px;
+    }
+    
+    &__left {
+        width: 740px;
+        padding-right: 60px;
+        border-right: 1px solid rgba(white, .6);
+        
+        i {
+            font-size: rem(116);
+            color: $c-blue;
+        }
+        
+        dl {
+            @extend %flex;
+            
+            &:not(:first-of-type) {
+                padding-top: 60px;
+            }
+            
+            &:not(:last-of-type) {
+                border-bottom: 1px solid rgba(white, .6);
+            }
+        }
+        
+        dt {
+            width: 200px;
+            padding-right: 20px;
+            text-align: center;
+        }
+        
+        dd {
+            flex: 1;
+        }
+        
+        .o-header__secondary {
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__right {
+        width: 340px;
+        padding-left: 60px;
+        
+        dl {
+            margin-bottom: 15px;
+            color: $c-blue;
+        }
+        
+        dd {
+            font-size: rem(22);
+        }
+        
+        dt {
+            line-height: 1;
+            font: {
+                size: rem(80);
+                weight: $bold;
+            }
+            
+            span {
+                @extend %anim-slow;
+                opacity: 0;
+                
+                &.anim--loaded {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .o-header__secondary {
+            margin-bottom: 60px;
+        }
+    }
+    
+    &__row {
+        padding-bottom: 60px;
+            
+        
+    }
+    
+    .o-circle {
+        @extend %abs;
+            top: -80px; right: -80px;
+//        right: -50%; top: -50%;
+    }
+
+    .o-header {
+        margin-bottom: 140px;
+        
+        &__secondary {
+            font-weight: $bold;
+        }
+    }
+}

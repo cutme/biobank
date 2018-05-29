@@ -1,0 +1,57 @@
+.c-arch {
+    font-size: rem(14);
+    color: $c-blue2;
+
+    ul {
+        @extend %flex
+    }
+
+    li {
+        margin-right: 36px;
+        
+        &:first-child {
+            transition-delay: 100ms;
+            color: $c-blue;
+            
+            a {
+                &:after, &:before {
+                    background-color: $c-blue2;
+                }
+            }
+        }
+        
+        &:nth-child(2) {
+            transition-delay: 200ms;
+        }
+        
+        &:nth-child(3) {
+            transition-delay: 300ms;
+        }
+        
+        &:nth-child(4) {
+            transition-delay: 400ms;
+        }
+        
+        &:nth-child(5) {
+            transition-delay: 500ms;
+        }
+        
+        &:nth-child(6) {
+            transition-delay: 600ms;
+        }
+        
+        &:nth-child(7) {
+            transition-delay: 700ms;
+        }
+        
+        &:nth-child(8) {
+            transition-delay: 800ms;
+        }
+        
+        a {            
+            &:after, &:before {
+                background-color: $c-blue2;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.o-header {
+
+    &__primary {
+        @extend %rel;
+        font: {
+            size: rem(40);
+            weight: $bold;
+        }        
+    }
+    
+    &__secondary {
+        @extend %rel;
+        line-height: 1.4;
+        font: {
+            size: rem(22);
+            weight: $bold;
+        }
+    }
+    
+    &__third {
+        line-height: 1.4;
+        font: {
+            size: rem(18);
+            weight: $bold;
+        }
+    }
+    
+    &__primary,
+    &__secondary {
+        
+    }
+    
+    &__line {
+        padding-left: 100px;
+        transition-delay: 2s;
+
+        &:before {
+            @extend %abs;
+            @extend %abs-after;
+            @extend %abs-y;
+            @extend %anim-slow;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            margin-top: -4px;
+            transform: scale3d(0, 1, 1);
+            transform-origin: right;
+        }
+
+        &.anim--loaded {
+        
+            &:before {
+                transform: scale3d(1, 1, 1);
+                transform-origin: right center;
+            }
+        }
+
+        &--blue {
+            &:before {
+                background-color: $c-blue;
+            }
+        }
+        
+        &--navy {
+            &:before {
+                background-color: $c-navy;
+            }
+        }
+    }    
+    
+    &--margin {
+        margin-bottom: 100px;
+    }
+}

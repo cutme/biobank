@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<%= require('html-loader!./includes/head.html') %>
+
+<body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+    <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: white;" id="cover"></div>
+
+
+    <%= require('html-loader!./includes/top.html') %>
+
+    
+	<div itemprop="mainContentOfPage" role="main" class="o-container">
+
+        <div class="c-contact u-first">
+            <div class="o-wrap">
+                <div class="o-section">
+                
+                    <header class="o-header">
+                        <h2 class="o-header__primary o-header__line o-header__line--blue anim">Kontakt</h2>
+                    </header>
+                </div>
+            </div>
+
+        
+            <div class="o-indent">
+                <div class="o-indent__item">
+
+                    <div class="o-indent__col o-indent__col--left" style="background-image: url(<%= require("./img/map.png") %>);">
+                    
+                    </div>
+                
+                    <div class="o-indent__col o-indent__col--right">
+                        <div class="o-section">
+                        
+                            <ul class="o-list">
+                                <li class="o-list__item">
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-envelope-circle anim anim--rotate"></i>
+                                        </dt>
+                                        
+                                        <dd class="anim anim--up">
+                                            <h4 class="o-header__secondary">Biobank Fahrenheita</h4>
+                                            <p>Zakład Medycznej</p>
+                                            <p>Diagnostyki Laboratoryjnej</p>
+                                            <p>Budynek 48</p>
+                                            <p>ul. Dębinki 7, Gdańsk 80-211</p>
+                                            <p>Polska</p>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                
+                                <li class="o-list__item">
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-avatar anim anim--rotate"></i>
+                                        </dt>
+                                        
+                                        <dd class="anim anim--up">
+                                            <h4 class="o-header__secondary">Biobank Fahrenheita</h4>
+                                            
+                                            <div class="u-borderline">
+                                                <p>dr Natalia Filipowicz</p>
+                                                <p><a href="mailto:biobank@gumed.edu.pl">biobank@gumed.edu.pl</a></p>
+                                                <p>+48 58 349-11-82</p>
+                                            </div>
+                                            
+                                            <div class="u-borderline">
+                                                <p>dr Iwona Pelikant-Małecka</p>
+                                                <p><a href="mailto:biobank@gumed.edu.pl">biobank@gumed.edu.pl</a></p>
+                                                <p>+48 58 349-11-83</p>
+                                            </div>
+
+                                        </dd>
+                                    </dl>
+                                </li>
+                                
+                                <li class="o-list__item">
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-direction anim anim--rotate"></i>
+                                        </dt>
+                                        
+                                        <dd class="anim anim--up">
+                                            <h4 class="o-header__secondary">Dojazd</h4>
+                                            <p>Do Biobanku dojedziesz SKM Przystanek Politechnika lub tramwajem przystanek GUMED, następnie autobusem 115 dojedziesz bezpośrednio pod budynek </p>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+       
+        </div>
+
+        
+        <%= require('html-loader!./includes/footer.html') %>
+        
+
+	</div>
+
+
+</body>
+</html>

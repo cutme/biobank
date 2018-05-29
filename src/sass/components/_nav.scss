@@ -1,0 +1,100 @@
+.c-nav {
+    @extend %rel;
+
+    &__flags {
+        @extend %flex;
+        @extend %abs;
+        right: 0; top: -20px;
+
+        li {
+            @extend %anim;
+
+            &:first-child {
+                margin-right: 12px;
+            }
+            
+            &:hover {
+                transform: translate3d(0, -5px, 0);
+            }
+        }
+    }
+
+    &__menu {
+    
+        a {
+            @extend %ulink;            
+            white-space: nowrap;
+        }
+    
+        .c-top & {
+            @extend %flex;
+            @extend %anim;
+            padding-top: 30px;
+            opacity: 0;
+            
+            .pace-done & {
+                opacity: 1;
+            }
+    
+            li {
+                padding: 0 10px;
+                
+                &:nth-child(2) {
+                    transition-delay: 100ms;
+                }
+                
+                &:nth-child(3) {
+                    transition-delay: 200ms;
+                }
+                
+                &:nth-child(4) {
+                    transition-delay: 300ms;
+                }
+
+                &:nth-child(5) {
+                    transition-delay: 400ms;
+                }
+
+                &:nth-child(6) {
+                    transition-delay: 500ms;
+                }
+
+                &:nth-child(7) {
+                    transition-delay: 600ms;
+                }
+
+                &:nth-child(8) {
+                    transition-delay: 700ms;
+                }
+
+
+                
+                &:last-child {
+                    padding-right: 0;
+                }
+                
+                &.current-menu-item {
+                    a {
+                        font-weight: $black;
+    
+                        &:before {
+                            bottom: -12px;
+                            height: 4px;
+                            border-radius: 4px;
+                            transform: scale3d(1, 1, 1);
+                        }
+                    }
+                }
+            }
+            
+            a {
+                font-size: rem(22);
+                
+                &:before {
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+
+}

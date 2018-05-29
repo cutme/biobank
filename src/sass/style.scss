@@ -1,0 +1,58 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/anims';
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+//@import 'tools/pace';
+@import 'tools/pace-theme-bounce';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/btn';
+@import 'objects/circle';
+@import 'objects/circles';
+@import 'objects/container';
+@import 'objects/header';
+@import 'objects/indent';
+@import 'objects/icons';
+@import 'objects/list';
+@import 'objects/section';
+@import 'objects/wrap';
+
+@import 'components/arch';
+@import 'components/article';
+@import 'components/benefits';
+@import 'components/contact';
+@import 'components/edu';
+@import 'components/filter';
+@import 'components/footer';
+@import 'components/hero';
+@import 'components/history';
+@import 'components/how';
+@import 'components/intranet';
+@import 'components/kit';
+@import 'components/nav';
+@import 'components/media';
+@import 'components/newsindex';
+@import 'components/newspost';
+@import 'components/newsprev';
+@import 'components/partners';
+@import 'components/projects';
+@import 'components/search';
+@import 'components/standards';
+@import 'components/team';
+@import 'components/timeline';
+@import 'components/top';
+@import 'components/what';
+
+@import 'trumps/trumps';

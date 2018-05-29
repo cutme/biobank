@@ -1,0 +1,98 @@
+.c-newsindex {
+    margin-bottom: 40px;
+    
+    &__item {
+        @extend %rel;
+        margin-bottom: 40px;
+        padding-right: 60px;
+
+        &:nth-child(even) {
+            width: 580px;
+        }
+
+        &:nth-child(odd) {
+            width: 540px;
+            margin-right: 60px;
+            
+            &:after {
+                @extend %abs;
+                @extend %abs-after;
+                @extend %anim-slow;
+                top: 0;
+                right: 0;
+                width: 1px; height: calc(100% + 40px);
+                background-color: $c-blue;
+                transform-origin: top;
+                transform: scale3d(1, 0, 1);
+            }
+            
+            &:last-child {
+                &:after {
+                    height: 100%;
+                }
+            }         
+        }
+        
+        &.anim--loaded {
+            &:after {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    }
+    
+    &__list {
+        @extend %flex;
+        @extend %flex-wrap;
+
+        img {
+            @extend %anim;
+        }
+
+        dl {
+            @extend %flex;
+            @extend %flex-wrap;            
+        }
+        
+        dt {
+            width: 220px;
+            padding-right: 40px;
+            
+            
+            a {
+                display: block;
+                background-color: $c-blue;
+                overflow: hidden;
+
+                &:hover {
+                    
+                    img {
+                        opacity: .2;
+                        transform: scale3d(1.1,1.1,1);
+                    }
+                }
+            }
+        }
+        
+        dd {
+            @extend %flex;
+            @extend %flex-space-between;
+            @extend %flex-wrap;
+            flex: 1;
+            flex-direction: column;            
+        }
+        
+        p {
+            font-size: rem(14);
+        }
+        
+        .o-btn {
+            align-self: flex-start;
+        }
+        
+        .o-header__third {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+

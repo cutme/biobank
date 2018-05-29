@@ -1,0 +1,16 @@
+.c-projects {
+
+    .o-list {
+        &__item {                
+            dd {
+                border-bottom: 1px solid $c-blue;
+            }
+        }
+    }
+
+    .o-header {        
+        &__secondary {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.c-team {
+    background-color: rgba($c-blue, .07);
+
+    .icon-envelope {
+        display: inline-flex;
+        @extend %flex-xy;
+        width: 20px;
+        height: 20px;
+        background-color: $c-blue;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: rem(12);
+        color: white;
+    }
+
+    .o-header {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+
+        &:after {
+            background-color: $c-blue;
+        }
+    }
+    
+    .o-list {
+        &--primary {
+            margin-bottom: 40px;
+
+            .o-list__item {
+                &:first-child {
+                    dd { 
+                        padding-bottom: 75px;
+                        border-bottom: 1px solid $c-blue;
+                        
+                    }
+                }
+                
+                &:last-child {
+                    @extend %rel;
+                    
+                    &:after {
+                        @extend %abs;
+                        @extend %abs-after;
+                        left: -20px; bottom: 45px;
+                        width: calc(100% + 20px); height: 1px;
+                        background-color: $c-blue;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__mail {
+        margin-bottom: 30px;
+        
+        a {
+            @extend %ulink;
+        }
+    }
+}

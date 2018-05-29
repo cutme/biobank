@@ -1,0 +1,37 @@
+// Fonts
+
+$axiforma:  'Axiforma', sans-serif;
+$icons:		'icomoon';
+
+
+// Default
+
+$text:		$axiforma;
+
+
+
+// Font weights
+
+$book:              300;
+$bold:              700;
+$black:             900;
+
+$z-index: (
+	container:      90,
+	top:           130,
+);
+
+
+
+// Default
+
+$base-font-size:	18;
+$base:				1200;
+
+
+// RWD
+
+$tablet:				1024;
+$tablet_portrait:		880;
+$smartphone:			640;
+$smartphone_portrait:	480;

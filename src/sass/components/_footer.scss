@@ -1,0 +1,85 @@
+.c-footer {
+    background-color: $c-navy;
+    color: $c-gray;
+    overflow: hidden;
+    
+    address {
+        font-size: rem(14);
+        
+        p {
+            margin-bottom: 5px;
+        }
+    }
+    
+    &__col {
+        width: 50%;
+
+        > section {
+            width: 50%;
+        }
+        
+        &--left {
+            @extend %flex;
+            border-right: 1px solid $c-gray;
+        }
+        
+        &--right {
+            padding-left: 90px;
+
+            .o-header__secondary {
+                //margin-bottom: 40px;
+            }
+        }
+    }
+    
+    &__summary {
+        @extend %flex;
+        @extend %flex-space-between;
+        padding: 45px 0 55px 0;
+        font-size: rem(14);
+    }
+    
+    .o-header {
+        @extend %rel;
+        margin-bottom: 35px;
+        padding-bottom: 20px;
+        
+        &:after {
+            background-color: $c-gray;
+        } 
+    }
+    
+    .o-section {
+        @extend %flex;
+        border-bottom: 1px solid $c-gray;
+        padding-bottom: 20px;
+    }
+    
+    .c-nav__menu {
+        margin-bottom: 50px;
+        font-size: rem(14);
+
+        li {
+            margin-bottom: 5px;
+        }
+        
+        a {
+            &:after, &:before {
+                background-color: $c-gray;
+            }
+        }
+    }
+    
+    .icon-of {
+        @extend %abs; 
+        right: 0; top: 0;
+        font-size: rem(232);
+        transform: translate3d(0, -100%, 0);
+        transition-delay: 1s;
+        color: $c-blue;
+        
+        &.anim--loaded {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

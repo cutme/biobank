@@ -1,0 +1,27 @@
+[class^="icon-"], [class*=" icon-"] {
+	@extend %icomoon;
+}
+
+.bg-navy {
+    background-color: $c-navy;
+    color: white;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.u-borderline {
+    @extend %rel;
+
+    &:after {
+        @extend %abs;
+        @extend %abs-after;
+        left: 0; bottom: 0;
+        width: 40px; height: 1px;
+    }
+}
+
+.u-first {
+    padding-top: 170px;
+}

@@ -1,0 +1,9 @@
+.o-wrap {
+    @extend %rel;
+    max-width: $base + px;
+    margin: 0 auto;
+    padding: {
+       left: 10px;
+       right: 10px;
+    }
+}

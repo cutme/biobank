@@ -1,0 +1,25 @@
+.c-media {
+    .o-list {
+        .o-header__secondary {
+            margin-bottom: 10px;
+        }
+    
+        p {
+            margin-bottom: 10px;
+            font-size: rem(15);
+        }
+        
+        &__item {
+            dd {
+                border-bottom: 1px solid $c-blue;
+            }
+            
+            &:last-child,
+            &:nth-last-child(2) {
+                dd {
+                    border: none;
+                }   
+            }
+        }
+    }
+}

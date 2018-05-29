@@ -1,0 +1,23 @@
+.c-article {
+    
+    &__content {
+        max-width: 680px;
+        padding-left: 100px;
+        
+        p {
+            margin-bottom: 2em;
+        }
+        
+        &--big {
+            p {
+                font-size: rem(22);
+            }
+        }
+        
+        .o-header {
+            &__secondary {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

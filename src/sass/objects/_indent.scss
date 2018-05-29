@@ -1,0 +1,22 @@
+.o-indent {
+    max-width: 1900px;
+    padding-left: 60px;
+    color: white;
+    
+    &__col {
+        width: 50%;
+        
+        &--right {
+            max-width: 600px;
+            padding-left: 110px;
+            padding-right: 10px;
+            color: white;
+        }
+    }
+    
+    &__item {
+        @extend %flex;
+        background-color: $c-blue;
+        padding-right: 60px;
+    }
+}

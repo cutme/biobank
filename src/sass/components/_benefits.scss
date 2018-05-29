@@ -1,0 +1,27 @@
+.c-benefits {
+    background-color: rgba($c-blue, .07);
+    
+    &__intro {
+        margin-bottom: 110px;
+        padding-left: 100px;
+        column-count: 2;
+        column-gap: 120px;
+    }
+    
+    .o-list {
+        margin-bottom: 60px;
+
+        &__item {                
+            dd {
+                border-bottom: 1px solid $c-blue;
+            }
+            
+            &:last-child,
+            &:nth-last-child(2) {
+                dd {
+                    border: none;
+                }   
+            }
+        }
+    }
+}

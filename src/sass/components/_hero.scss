@@ -1,0 +1,75 @@
+.c-hero {
+    @extend %rel;
+
+    article {
+        width: 800px;
+    }
+
+    &__content {
+        padding-left: 100px;
+    }    
+
+    .o-circle {
+        @extend %abs;
+
+        &--one {
+            @extend %anim-slow;
+            top: 90px;
+            left: -70px;
+            transition-delay: 1s;
+            transform: translate3d(0, -50%, 0);
+            opacity: 0;
+
+            .pace-done & {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        &--two {
+            @extend %abs-y;
+            right: -240px;  
+        }
+        
+        &--three {
+            @extend %abs-y;
+            left: -20px;
+        }
+    }
+
+    .o-header {
+        margin-bottom: 50px;
+        
+        &__primary {
+            @extend %anim-slow;
+            transform: translate3d(20px, 0, 0);
+            opacity: 0;
+            
+            .pace-done & {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        &__secondary {
+            @extend %anim-slow;
+            transition-delay: 500ms;
+            padding-left: 200px;
+            line-height: 1.7;
+            transform: translate3d(-20px, 0, 0);
+            opacity: 0;
+            
+            .pace-done & {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    }
+    
+    .o-wrap {
+        @extend %rel;
+        @extend %flex;
+        @extend %flex-y;
+        padding-top: 170px;
+    }
+}
