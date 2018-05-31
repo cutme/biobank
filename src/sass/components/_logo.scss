@@ -1,0 +1,23 @@
+.c-logo {
+    display: block;
+    
+    
+    &--biobank {
+        transform-origin: left;
+        width: 246px; height: 120px;        
+    }
+    
+    &--bbmri {
+        transform-origin: right;
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            display: none;
+        }
+    }
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        transform: scale3d(.7, .7, .7);
+    }
+}
+
+

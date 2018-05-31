@@ -119,6 +119,41 @@ const scrollTo = function (target, speed, offset) {
 }).call(this);
 
 
+// nav
+
+(function() {
+    
+    const hamburger = document.getElementsByClassName('js-hamburger')[0];
+    
+    if (hamburger) {
+     
+        const nav = document.getElementsByClassName('js-nav')[0];
+     
+        const action = function(e) {
+            
+            e.currentTarget.classList.toggle('is-active');
+            document.body.classList.toggle('no-overflow');
+            nav.classList.toggle('is-visible');
+            
+        }
+        
+        hamburger.addEventListener('click', action);
+        
+        window.addEventListener('resize', function() {
+           
+           if (window.innerWidth > 1440) {
+                if (hamburger.classList.contains('is-active')) {
+                    hamburger.classList.remove('is-active');
+                    document.body.classList.remove('no-overflow');
+                    nav.classList.remove('is-visible');
+                }
+           }
+            
+        });
+    }
+    
+}).call(this);
+
 
 // Show on scroll
 

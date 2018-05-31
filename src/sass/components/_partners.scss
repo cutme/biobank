@@ -1,23 +1,109 @@
 .c-partners {
-    
+
     .o-header {
         margin-bottom: 150px;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            margin-bottom: 50px;
+        }
     }
     
     &__content {
         @extend %flex;
+        
+        @media screen and ( max-width: $base + px ) {
+            padding: {
+                left: 100px;
+                right: 100px;
+            }
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            flex-wrap: wrap;
+            padding-left: grid(100, $tablet);
+            padding-right: grid(100, $tablet);
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            padding-right: 0;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding-left: 0;    
+        }
     }
     
     &__info {
-        @extend %abs;
-        right: 0; top: 0;
-        width: 50%;
         padding: 90px 10px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: 0;
+        }
+
+        @media screen and ( min-width: $smartphone + 1px ) {
+            position: absolute;
+            right: 0; top: 0;
+            width: 50%;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            padding: {
+                left: grid(100, $tablet);
+                bottom: 60px;
+                top: 0;
+            }
+        }
     }
     
     &__item {
-        width: 25%;
-        padding-right: 60px;
+        padding-right: 60px;        
+        
+        @media screen and ( min-width: $base + 1px ) {
+            width: 300px;
+        
+            &:last-child {
+                width: 280px;
+            }
+        }
+        
+        @media screen and ( max-width: $base + px ) {
+            width: grid(250, $base - 220);
+            
+            &:last-child {
+                width: grid(230, $base - 220);
+                padding-right: 0;
+            }
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 50%;
+            padding-bottom: 60px;
+            
+            &:last-child {
+                width: 50%;
+                padding-right: 60px;
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            padding-right: 20px;
+            
+            &:last-child {
+                width: 50%;
+                padding-right: 20px;
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            padding-right: 0;
+            text-align: center;
+            
+            &:last-child {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
     }
     
     &__logo {
@@ -28,6 +114,14 @@
         
         &:after {
             background-color: $c-blue;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            margin: 0 auto;
+            
+            &:after {
+                display: none;
+            }
         }
     }
     

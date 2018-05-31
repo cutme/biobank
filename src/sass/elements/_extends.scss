@@ -61,7 +61,6 @@
 	transform: translate(-50%, -50%);
 }
 
-
 %bg-cover {
     background: {
         position: center;
@@ -141,6 +140,8 @@
 %ulink {
     @extend %rel;
     
+    .desktop & {
+    
     &:after, &:before {
         @extend %abs;
         @extend %abs-after;
@@ -169,5 +170,6 @@
             transform: scale3d(1, 1, 1);
             transform-origin: left center;
         }
+    }
     }
 }

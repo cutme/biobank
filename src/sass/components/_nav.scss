@@ -1,5 +1,21 @@
 .c-nav {
     @extend %rel;
+    
+    @media screen and ( max-width: $menu + px ) {
+        position: absolute;
+        width: 100%;
+        height: 170px;
+        left: 0;
+        top: 0;
+    }
+    
+    @media screen and ( max-width: $tablet + px ) {
+        height: 130px;
+    }
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        height: 80px;
+    }
 
     &__flags {
         @extend %flex;
@@ -17,60 +33,172 @@
                 transform: translate3d(0, -5px, 0);
             }
         }
+        
+        @media screen and ( max-width: $menu + px ) {
+            position: absolute;
+            top: 35px;
+            right: 350px;
+            display: none;
+        }
+    }
+    
+    &.is-visible {
+        @media screen and ( max-width: $menu + px ) {
+            .c-nav__menu {
+                visibility: visible;
+
+                li {
+                    a {
+                        opacity: 1;
+                    }
+
+                    &:after {
+                        transform: scale3d(1, 1, 1);
+                    }
+                }
+            }
+        }
     }
 
     &__menu {
-    
+       // @extend %anim-slow;
+
         a {
+            @extend %anim-slow;
             @extend %ulink;            
             white-space: nowrap;
         }
     
         .c-top & {
             @extend %flex;
-            @extend %anim;
+            ///@extend %anim;
             padding-top: 30px;
             opacity: 0;
             
             .pace-done & {
                 opacity: 1;
             }
+            
+            @media screen and ( max-width: $menu + px ) {
+                position: fixed;
+                left: 0;
+                top: 170px;
+                width: 100%;
+                height: calc(100% - 170px);
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 0;
+                visibility: hidden;
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                top: 130px;
+                height: calc(100% - 130px);
+            }
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                top: 80px;
+                height: calc(100% - 80px);
+            }
     
             li {
+                @extend %rel;
                 padding: 0 10px;
+                
+                a {
+                    @media screen and ( max-width: $menu + px ) {
+                        opacity: 0;
+                    }
+                }
+                
+                &:after {
+                    @extend %abs;
+                    @extend %abs-after;
+                    @extend %anim-slow;
+                    z-index: -1;
+                    left: 0; top: 0;
+                    width: 100%; height: 100%;
+                    background-color: white;
+                    transform-origin: center top;
+                    transform: scale3d(1, 0, 1);
+                }
+                
+                @media screen and ( max-width: $menu + px ) {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    a {
+                        align-self: flex-start;
+                        margin: 0 auto;
+                    }
+                }
                 
                 &:nth-child(2) {
                     transition-delay: 100ms;
+                    
+                    &:after, a {
+                        transition-delay: 100ms;
+                    }
                 }
                 
                 &:nth-child(3) {
                     transition-delay: 200ms;
+                    
+                    &:after, a {
+                        transition-delay: 200ms;
+                    }
                 }
                 
                 &:nth-child(4) {
                     transition-delay: 300ms;
+                    
+                    &:after, a {
+                        transition-delay: 300ms;
+                    }
                 }
 
                 &:nth-child(5) {
                     transition-delay: 400ms;
+                    
+                    &:after, a {
+                        transition-delay: 400ms;
+                    }
                 }
 
                 &:nth-child(6) {
                     transition-delay: 500ms;
+                    
+                    &:after, a {
+                        transition-delay: 500ms;
+                    }
                 }
 
                 &:nth-child(7) {
                     transition-delay: 600ms;
+                    
+                    &:after, a {
+                        transition-delay: 600ms;
+                    }
                 }
 
                 &:nth-child(8) {
                     transition-delay: 700ms;
+                    
+                    &:after, a {
+                        transition-delay: 700ms;
+                    }
                 }
 
 
                 
                 &:last-child {
                     padding-right: 0;
+                    
+                    @media screen and ( max-width: $menu + px ) {
+                        padding-bottom: 40px;
+                    }
                 }
                 
                 &.current-menu-item {

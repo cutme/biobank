@@ -5,6 +5,13 @@
     border: 45px solid $c-blue;
     border-radius: 50%;
     
+    @media screen and ( max-width: $tablet + px ) {
+        width: get-vw-tablet(160);
+        height: get-vw-tablet(160);
+        border-width: get-vw-tablet(45);
+    }
+    
+    
     &--down {
         transform: translateY(150%);
     }
@@ -14,23 +21,34 @@
             @extend %abs;
             @extend %abs-y;
             @extend %abs-after;
-            width: 400px;
             width: 100vw;
             height: 46px;
             background-color: $c-blue;
             border-radius: 46px;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                height: get-vw-tablet(46);
+            }
         }
     }
     
     &--left {
         &:after {
             right: 155px;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                right: get-vw-tablet(155);
+            }
         }
     }
     
     &--right {
         &:after {
             left: 155px;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                left: get-vw-tablet(155);
+            }
         }
     }
     

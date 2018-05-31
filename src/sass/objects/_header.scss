@@ -5,7 +5,15 @@
         font: {
             size: rem(40);
             weight: $bold;
-        }        
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: get-vw-tablet-portrait(40);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(24);
+        }
     }
     
     &__secondary {
@@ -15,6 +23,15 @@
             size: rem(22);
             weight: $bold;
         }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: get-vw-tablet-portrait(22);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            //font-size: get-vw-smartphone-portrait(22);
+            font-size: rem(18);
+        }
     }
     
     &__third {
@@ -22,6 +39,14 @@
         font: {
             size: rem(18);
             weight: $bold;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: get-vw-tablet-portrait(18);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(18);
         }
     }
     
@@ -33,6 +58,10 @@
     &__line {
         padding-left: 100px;
         transition-delay: 2s;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: grid(100, $tablet);
+        }
 
         &:before {
             @extend %abs;
@@ -45,6 +74,10 @@
             margin-top: -4px;
             transform: scale3d(0, 1, 1);
             transform-origin: right;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                width: grid(80, $tablet);
+            }
         }
 
         &.anim--loaded {

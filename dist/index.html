@@ -16,9 +16,13 @@
     <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: white;" id="cover"></div>
 
 
+    <script>
     
-    <div class="c-top js-top" style="padding-left: 60px;">
-        <a href="index.html" class="c-logo">
+    
+</script>
+
+    <div class="c-top js-top" >
+        <a href="index.html" class="c-logo c-logo--biobank">
         
             
 <svg version="1.1" id="Tryb_izolacji" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -105,6 +109,8 @@
 <!--             <img src=<%= require("./img/logo-biobank-kopia.svg") %> alt="Biobank Fahrenheita" width="246"> -->
         </a>
         
+        <div class="c-hamburger js-hamburger" style="display: none"></div>
+        
         <nav class="c-nav js-nav" style="display: none">
             <ul class="c-nav__flags">
                 <li>
@@ -152,7 +158,7 @@
             
         </nav>
         
-        <a href="index.html" class="c-logo js-bbmri" style="display: none">
+        <a href="index.html" class="c-logo c-logo--bbmri js-bbmri" style="display: none">
             <img src="img/logo-bbmri.png" alt="BBMRI.pl" width="167">
         </a>        
     </div>
@@ -385,6 +391,7 @@
         
         <footer class="c-footer">
             <div class="o-wrap">
+                <div class="c-footer__content">
                 <div class="o-section">
                     <div class="c-footer__col c-footer__col--left">
                         <section class="anim anim--up">
@@ -459,6 +466,7 @@
                 </div>
                 
                 <i class="icon-of anim"></i>
+                </div>
             </div>
         </footer>
 

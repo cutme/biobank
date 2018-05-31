@@ -7,7 +7,22 @@
 }
 
 @function get-vw-base($target) {
-	$vw-context: (($base - 160) * 0.01);
+	$vw-context: (($base) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-tablet($target) {
+	$vw-context: (($tablet) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-tablet-portrait($target) {
+	$vw-context: (($tablet-portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-smartphone-portrait($target) {
+	$vw-context: (($smartphone_portrait) * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }
 

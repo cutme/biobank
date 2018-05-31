@@ -1,0 +1,56 @@
+.c-hamburger {
+    @extend %abs;
+    @extend %abs-xy;
+    @extend %anim;
+    width: 33px; height: 22px;
+    border-top: 2px solid $c-blue;
+    cursor: pointer;
+    opacity: 0;
+    
+    @media screen and ( min-width: $menu + 1px ) {
+        z-index: 4;
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        left: auto;
+        right: 20px;
+        transform: translate(0, -50%);
+    }
+    
+    .pace-done & {
+        @media screen and ( max-width: $menu + px ) {
+            opacity: 1;
+        }
+    }
+
+    &:after, &:before {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %anim;
+        width: 100%; height: 2px;
+        background-color: $c-blue;
+    }
+    
+    &:after {
+        transform-origin: right;
+        top: 100%;
+    }
+    
+    &:before {
+        transform-origin: left;
+        top: calc(50% - 1px);
+    }
+    
+    &.is-active {
+        border-color: transparent;
+
+        &:after {
+            transform: rotate(45deg) translate(-6px, 2px);
+        }
+        
+        &:before {
+            transform: rotate(-45deg) translate(-4px, 8px);
+        }
+        
+    }
+}
