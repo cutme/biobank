@@ -2,8 +2,17 @@
     @extend %flex;
     @extend %flex-wrap;
 
-    &__item {
-        width: 580px;
+    &__item {        
+        width: grid(580, $base - 20);
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 100%;
+            padding-right: 20px;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding-right: 0;
+        }
        
         &:nth-child(even) {
             dd, i {
@@ -12,8 +21,16 @@
         }
         
         &:nth-child(odd) {
-            width: 600px;
-            padding-right: 20px;
+            width: grid(600, $base - 20);
+            padding-right: 20px;    
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 100%;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                padding-right: 0;
+            }
         }
         
         i {
@@ -34,6 +51,10 @@
             flex: 1;
             margin-bottom: 45px;
             padding-bottom: 45px;
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                text-align: center;
+            }
         }
         
         &:last-child,
@@ -47,6 +68,12 @@
             width: 100px;
             padding-right: 20px;
             text-align: center;
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+                margin-bottom: 40px;
+                padding: 0;
+            } 
             
             img {
                 width: 120px;
@@ -62,7 +89,23 @@
     
     &--big {
         dt {
-            width: 200px;            
+            width: 200px;    
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {            
+            dt {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    
+    &--other {
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            dd {
+                margin-bottom: 0;
+                padding-bottom: 45px;
+            }
         }
     }
     

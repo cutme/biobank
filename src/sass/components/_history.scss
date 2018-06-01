@@ -1,8 +1,12 @@
 .c-history {
-    height: 730px;
+    
     background-color: $c-navy;
     margin: 170px 0 50px 0;
     color: white;
+    
+    @media screen and ( min-width: $tablet + 1px ) {
+        height: 730px;
+    }
     
     &__content {
         @extend %flex;
@@ -15,10 +19,54 @@
         bottom: -60px;
         width: 880px;
         overflow: hidden;
+        
+        .swiper-slide {
+            width: 880px; height: 560px;
+            background-size: cover;
+            background-position: center;
+
+        }
+        
+        @media screen and ( max-width: $base + px ) {
+            left: 410px;
+            top: 0;
+            bottom: auto;
+            top: 0;
+            height: 100%;
+            opacity: .1;
+            
+            img {
+                height: 100%;
+            }
+            
+            .swiper-slide,
+            .swiper-container,
+            .swiper-wrapper {
+                height: 100%;
+            }
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            left: 0;
+            width: 100%;
+        }
+        
     }
     
     &__text {
         width: 480px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 100%;
+            padding-left: 300px;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            padding: {
+                left: grid(100, $tablet);
+                right: grid(100, $tablet);
+            }
+        }
         
         p {
             line-height: 1.8;
@@ -32,6 +80,10 @@
     
     .o-header {
         margin-bottom: 130px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            margin-bottom: 50px;
+        }
     }
     
     .o-wrap {
@@ -45,7 +97,15 @@
             width: 100%;
             height: 100%;
             background-color: $c-blue;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                display: none;
+                //left: 0; top: 380px;
+                //height: calc(100% - 380px);
+            }
         }
     }
+    
+    
 }
 

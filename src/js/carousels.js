@@ -60,6 +60,16 @@ import swiper from '../sass/idangerous.swiper2.scss';
                 init: function() {
                     this.slideTo(1);  
                 }
+            },
+            
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    slidesOffsetBefore: 0,
+                    slidesOffsetAfter: 0,
+                    centeredSlides: true,
+                    spaceBetween: 0,
+                },
             }
         });
         
