@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js prod
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js dev
 
 PATH: 
   /opt/local/bin:/opt/local/sbin:/Users/admin/.rvm/gems/ruby-2.2.0/bin:/Users/admin/.rvm/gems/ruby-2.2.0@global/bin:/Users/admin/.rvm/rubies/ruby-2.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/admin/.rvm/bin
@@ -20,10 +20,10 @@ npm manifest:
           "babel-loader": "^7.1.2",
           "babel-preset-env": "^1.6.1",
           "browserslist": "^3.1.1",
+          "countup.js": "^1.9.3",
           "css-loader": "0.14.5",
           "extract-text-webpack-plugin": "^3.0.2",
           "file-loader": "^1.1.6",
-          "google-fonts-webpack-plugin": "^0.4.4",
           "gsap": "^1.20.4",
           "happypack": "^4.0.1",
           "html-loader": "^0.5.5",
@@ -43,11 +43,9 @@ npm manifest:
           "purifycss-webpack": "^0.7.0",
           "rimraf": "^2.6.2",
           "sass-loader": "^7.0.1",
-          "script-ext-html-webpack-plugin": "^1.8.8",
           "style-loader": "^0.20.1",
           "swiper": "^4.2.6",
           "url-loader": "^0.6.2",
-          "webfontloader": "^1.6.28",
           "webpack": "^3.11.0",
           "webpack-bundle-analyzer": "^2.11.1",
           "webpack-dev-server": "^2.11.1",
@@ -61,7 +59,7 @@ npm manifest:
       "name": "kapinski",
       "version": "1.0.0",
       "main": "index.js",
-      "repository": "",
+      "repository": "https://github.com/cutme/biobank.git",
       "author": "Bartosz Mediger <info@cutme.pl>",
       "license": "MIT",
       "dependencies": {
@@ -1629,6 +1627,10 @@ Lockfile:
       parse-json "^2.2.0"
       require-from-string "^1.1.0"
   
+  countup.js@^1.9.3:
+    version "1.9.3"
+    resolved "https://registry.yarnpkg.com/countup.js/-/countup.js-1.9.3.tgz#ce3e50cd7160441e478f07da31895edcc0f1c9dd"
+  
   create-ecdh@^4.0.0:
     version "4.0.1"
     resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.1.tgz#44223dfed533193ba5ba54e0df5709b89acf1f82"
@@ -2266,12 +2268,6 @@ Lockfile:
   encodeurl@~1.0.2:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
-  
-  encoding@^0.1.11:
-    version "0.1.12"
-    resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
-    dependencies:
-      iconv-lite "~0.4.13"
   
   end-of-stream@^1.0.0:
     version "1.4.1"
@@ -3095,15 +3091,6 @@ Lockfile:
     dependencies:
       sparkles "^1.0.0"
   
-  google-fonts-webpack-plugin@^0.4.4:
-    version "0.4.4"
-    resolved "https://registry.yarnpkg.com/google-fonts-webpack-plugin/-/google-fonts-webpack-plugin-0.4.4.tgz#deb897a8ba9097aa7ac78e31c532e266b3b701f9"
-    dependencies:
-      lodash "^4.17.4"
-      node-fetch "^1.6.3"
-      webpack-sources "^0.2.0"
-      yauzl "^2.8.0"
-  
   got@^5.0.0:
     version "5.7.1"
     resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
@@ -3534,7 +3521,7 @@ Lockfile:
     version "0.4.19"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
   
-  iconv-lite@^0.4.4, iconv-lite@~0.4.13:
+  iconv-lite@^0.4.4:
     version "0.4.21"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.21.tgz#c47f8733d02171189ebc4a400f3218d348094798"
     dependencies:
@@ -4721,13 +4708,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
     dependencies:
       lower-case "^1.1.1"
-  
-  node-fetch@^1.6.3:
-    version "1.7.3"
-    resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
-    dependencies:
-      encoding "^0.1.11"
-      is-stream "^1.0.1"
   
   node-forge@0.7.1:
     version "0.7.1"
@@ -6079,12 +6059,6 @@ Lockfile:
       ajv "^6.1.0"
       ajv-keywords "^3.1.0"
   
-  script-ext-html-webpack-plugin@^1.8.8:
-    version "1.8.8"
-    resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-1.8.8.tgz#faa888a286ce746fcd06a5e0a9e39ed7b9d24f66"
-    dependencies:
-      debug "^3.1.0"
-  
   scss-tokenizer@^0.2.3:
     version "0.2.3"
     resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -6316,10 +6290,6 @@ Lockfile:
   source-list-map@^0.1.4, source-list-map@~0.1.7:
     version "0.1.8"
     resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
-  
-  source-list-map@^1.1.1:
-    version "1.1.2"
-    resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-1.1.2.tgz#9889019d1024cce55cdc069498337ef6186a11a1"
   
   source-list-map@^2.0.0:
     version "2.0.0"
@@ -7165,10 +7135,6 @@ Lockfile:
     dependencies:
       minimalistic-assert "^1.0.0"
   
-  webfontloader@^1.6.28:
-    version "1.6.28"
-    resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
-  
   webpack-bundle-analyzer@^2.11.1:
     version "2.11.1"
     resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.11.1.tgz#b9fbfb6a32c0a8c1c3237223e90890796b950ab9"
@@ -7239,13 +7205,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-0.1.5.tgz#aa1f3abf0f0d74db7111c40e500b84f966640750"
     dependencies:
       source-list-map "~0.1.7"
-      source-map "~0.5.3"
-  
-  webpack-sources@^0.2.0:
-    version "0.2.3"
-    resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-0.2.3.tgz#17c62bfaf13c707f9d02c479e0dcdde8380697fb"
-    dependencies:
-      source-list-map "^1.1.1"
       source-map "~0.5.3"
   
   webpack-sources@^1.0.1:
@@ -7469,7 +7428,7 @@ Lockfile:
       decamelize "^1.0.0"
       window-size "0.1.0"
   
-  yauzl@^2.2.1, yauzl@^2.4.2, yauzl@^2.8.0:
+  yauzl@^2.2.1, yauzl@^2.4.2:
     version "2.9.1"
     resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.9.1.tgz#a81981ea70a57946133883f029c5821a89359a7f"
     dependencies:
@@ -7478,10 +7437,10 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: sh
-  Arguments: -c npm run clean && NODE_ENV=production webpack --config webpack.prod.js
-  Directory: /Volumes/Data/Projekty/www.kapinski.pl
+  Arguments: -c webpack-dev-server --host 0.0.0.0 --config webpack.dev.js
+  Directory: /Volumes/Data/Projekty/www.biobank.pl
   Output:
   
       at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)

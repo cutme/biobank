@@ -21,6 +21,11 @@
 	@return ($target / $vw-context) * 1vw;
 }
 
+@function get-vw-smartphone($target) {
+	$vw-context: (($smartphone) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
 @function get-vw-smartphone-portrait($target) {
 	$vw-context: (($smartphone_portrait) * 0.01);
 	@return ($target / $vw-context) * 1vw;
