@@ -33,14 +33,38 @@
     &__content {
         @extend %flex;
         @extend %flex-wrap;
+        
+        /*
+@media screen and ( max-width: $base + px ) {
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+        }
+*/
     }
+    
     
     &__left {
-        width: 800px;
-        margin-right: 60px;
+        width: grid(880, $base - 20);        
+        
+        @media screen and ( min-width: $tablet + 1px ) {
+            margin-right: grid(40, $base - 20);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 100%;
+        }
+        
+        article {
+            @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
+                padding-left: grid(100, $tablet);
+                padding-right: grid(100, $tablet);
+            }
+        }
     }
     
-    &__newest {
+    &__newest {        
         li {
             margin-top: 20px;
             padding: 20px 0;
@@ -57,6 +81,21 @@
     }
     
     &__right {
-        width: 240px;
+        width: grid(260, $base - 20);
+        padding-top: 20px;
+        
+        @media screen and ( min-width: $tablet + 1px ) and ( max-width: $base + px ) {
+            padding-right: 10px;
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 100%;
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
+            padding-left: grid(100, $tablet);
+            padding-right: grid(100, $tablet);
+        }
+
     }
 }

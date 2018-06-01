@@ -140,7 +140,7 @@
 %ulink {
     @extend %rel;
     
-    .desktop & {
+    
     
     &:after, &:before {
         @extend %abs;
@@ -166,10 +166,11 @@
     }
 
     &:hover {
+        .desktop & {
         &:before {                
             transform: scale3d(1, 1, 1);
             transform-origin: left center;
         }
-    }
+        }
     }
 }

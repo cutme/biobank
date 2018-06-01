@@ -4,6 +4,14 @@
     transform: translate(50%, -50%);
     display: table;
     
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        opacity: .1;
+        width: 720px;
+    }
+    
+
+    
     &__row {
         display: table-row;
     }
@@ -12,10 +20,18 @@
         display: table-cell;
         width: 180px; height: 180px;
         padding: 15px;
-        
+       
         .o-circle {
             width: 100%; height: 100%;
             border-width: 40px;
+            
+            @media screen and ( min-width: $tablet + 1px ) and ( max-width: $base + px ) {
+                border-width: get-vw-base(40);
+            }
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+                border-width: get-vw-tablet(40);
+            }
         }
     }
 }

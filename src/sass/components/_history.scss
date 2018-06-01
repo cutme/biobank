@@ -1,5 +1,4 @@
 .c-history {
-    
     background-color: $c-navy;
     margin: 170px 0 50px 0;
     color: white;
@@ -65,6 +64,13 @@
             padding: {
                 left: grid(100, $tablet);
                 right: grid(100, $tablet);
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) { 
+            padding: {
+                left: 10px;
+                right: 10px;
             }
         }
         

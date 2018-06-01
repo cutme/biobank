@@ -1,8 +1,20 @@
 .c-article {
     
     &__content {
-        max-width: 680px;
+        width: grid(680, $base - 20);
         padding-left: 100px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: grid(100, $tablet);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 100%;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding-left: 0;
+        }
         
         p {
             margin-bottom: 2em;
@@ -10,7 +22,11 @@
         
         &--big {
             p {
-                font-size: rem(22);
+                
+                
+                @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                    font-size: rem(22);
+                }
             }
         }
         

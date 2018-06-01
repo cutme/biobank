@@ -6,6 +6,13 @@
     margin-bottom: 40px;
     padding: 8px 0;
     
+    &--top {
+        @media screen and ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+            padding: 16px 0;
+        }
+    }
+    
     a {
         @extend %ulink;
     }
@@ -26,6 +33,7 @@
     }
     
     &:after {
+        left: 0;
         bottom: 0;
         transform-origin: right;
     }
@@ -45,7 +53,14 @@
     }
     
     &--pagination {
-        padding: 15px 0;
+        padding: {
+            top: 15px; 
+            bottom: 15px;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(14);
+        }
         
         &:after {
             display: none;
@@ -54,7 +69,7 @@
         a {
             &:before {
                 background-color: $c-blue;
-            }
+            }            
         }
     }
 }

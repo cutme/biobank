@@ -6,4 +6,12 @@
        left: 10px;
        right: 10px;
     }
+    
+    @media screen and ( max-width: $base + px ) {
+        padding: {
+           left: 20px;
+           right: 20px;
+        }
+    }
+    
 }

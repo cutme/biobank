@@ -12,6 +12,7 @@
     font-size: rem(14);
     padding: 0 20px;
     line-height: 1;
+    white-space: nowrap;
     overflow: hidden;    
     
     &:after, &:before {
@@ -24,7 +25,9 @@
     }
 
     &:hover {
-        color: white;
+        .desktop & {
+            color: white;
+        }
     }
 
    
@@ -35,6 +38,10 @@
     
     &--blue {
         border-color: $c-blue;
+        
+        &:after, &:before {
+            background-color: $c-blue;
+        }
     }
     
     &--gray {

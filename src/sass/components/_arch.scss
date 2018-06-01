@@ -1,13 +1,33 @@
 .c-arch {
     font-size: rem(14);
     color: $c-blue2;
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
     ul {
-        @extend %flex
+    
+        @extend %flex;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+            
+        }
     }
 
     li {
-        margin-right: 36px;
+        
+        @media screen and ( min-width: $smartphone + 1px ) {
+            margin-right: 36px;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 33%;
+            margin-bottom: 5px;
+            text-align: center;
+        }
         
         &:first-child {
             transition-delay: 100ms;

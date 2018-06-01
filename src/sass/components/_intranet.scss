@@ -1,11 +1,23 @@
 .c-intranet {
     .c-article {
-        padding-bottom: 250px;
+        
+        @media screen and ( min-width: $tablet + 1px ) {
+            padding-bottom: 250px;
+        }
     }
     
     .c-how {
         .o-section {
             padding-top: 120px;
         }
+    }
+    
+    .o-circles {
+        z-index: 1;
+    }
+    
+    .o-section {
+        @extend %rel;
+        z-index: 5;
     }
 }

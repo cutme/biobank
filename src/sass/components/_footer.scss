@@ -12,11 +12,14 @@
     }
     
     &__content { 
-        @media screen and ( max-width: $base + px ) {
-            padding-left: 100px;
-            padding-right: 100px;
+       /*
+ @media screen and ( max-width: $base + px ) {
+            padding-left: 10px;
+            padding-right: 10px;
         }
-        
+*/
+        /*
+
         @media screen and ( max-width: $tablet + px ) {
             padding-left: grid(100, $tablet);
             padding-right: grid(100, $tablet);
@@ -28,6 +31,7 @@
                 right: 0;
             }
         }
+*/
     }
     
     &__col {

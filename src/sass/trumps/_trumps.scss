@@ -24,4 +24,12 @@
 
 .u-first {
     padding-top: 170px;
+    
+    @media screen and ( max-width: $tablet + px ) {
+        padding-top: 130px;
+    }
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        padding-top: 80px;
+    }
 }

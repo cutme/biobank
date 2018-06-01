@@ -191,10 +191,10 @@
                     }
                 }
 
-
-                
                 &:last-child {
-                    padding-right: 0;
+                    @media screen and ( min-width: $menu + 1px ) {
+                        padding-right: 0;
+                    }
                     
                     @media screen and ( max-width: $menu + px ) {
                         padding-bottom: 40px;

@@ -1,29 +1,43 @@
 .c-newsindex {
     margin-bottom: 40px;
     
+    /*
+&__content {
+        @media screen and ( max-width: $base + px ) {
+            padding: {
+                left: 10px; 
+                right: 10px;
+            }
+        }
+    }
+*/
+    
     &__item {
         @extend %rel;
+        width: grid(480, $base - 20);
         margin-bottom: 40px;
-        padding-right: 60px;
-
-        &:nth-child(even) {
-            width: 580px;
-        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 100%;
+        }        
 
         &:nth-child(odd) {
-            width: 540px;
-            margin-right: 60px;
+            margin-right: grid(120, $base - 20);
             
             &:after {
                 @extend %abs;
                 @extend %abs-after;
                 @extend %anim-slow;
                 top: 0;
-                right: 0;
+                right: grid(-60, 480);
                 width: 1px; height: calc(100% + 40px);
                 background-color: $c-blue;
                 transform-origin: top;
                 transform: scale3d(1, 0, 1);
+                
+                @media screen and ( max-width: $smartphone + px ) {
+                    display: none;
+                }
             }
             
             &:last-child {
@@ -50,13 +64,19 @@
 
         dl {
             @extend %flex;
-            @extend %flex-wrap;            
+           // @extend %flex-wrap;            
         }
         
         dt {
+            @extend %rel;
+            overflow: hidden;
             width: 220px;
             padding-right: 40px;
             
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 140px;
+                padding-right: 20px;
+            }
             
             a {
                 display: block;
@@ -89,8 +109,16 @@
             align-self: flex-start;
         }
         
-        .o-header__third {
-            margin-bottom: 10px;
+        .o-header {
+            margin-bottom: 20px;
+
+            &__third {
+                margin-bottom: 10px;
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    font-size: rem(14);
+                }
+            }
         }
     }
 }
