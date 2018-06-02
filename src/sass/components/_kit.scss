@@ -1,5 +1,4 @@
 .c-kit {
-    //@extend %rel;
     background-color: $c-blue;
     padding-bottom: 20px;
     color: white;
@@ -13,9 +12,7 @@
             width: 100%; height: 100%;
             background-color: white;
             transform-origin: left top;
-            transform: scale3d(1, 0, 1); 
-            
-                   
+            transform: scale3d(1, 0, 1);                    
         }
     }
     

@@ -5,35 +5,63 @@
     &__content {
         @extend %flex;
         @extend %flex-wrap;
-        @extend %rel;
         padding-left: 100px;
         
-        &:after {
-            @extend %abs;
-            @extend %abs-after;
-            left: 640px; top: 0;
-            width: 1px; height: 100%;
-            background-color: white;
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: grid(100, $tablet);
         }
     }
     
     &__col {
+        @extend %rel;
         width: 50%;
         
-        &--left {
-            padding-right: 60px;
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 100%;
         }
         
+        &--left {
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                padding-right: 60px;
+            }
+            
+             &:after {
+                @extend %abs;
+                @extend %abs-after;
+                left: calc(100%); top: 0;
+                width: 1px; height: 100%;
+                background-color: white;
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    display: none
+                }
+            }
+            
+            .c-standards__list {
+                .c-standards__item {
+                    &:last-child {
+                        &:after {
+                            @media screen and ( max-width: $tablet_portrait + px ) {
+                                display: block;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
         &--right {
-            padding-left: 60px;
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                padding-left: 60px;
+            }
         }
     }
     
     &__list {
         counter-reset: sekcja;
-        
+ 
         &--one {
-        
             .c-standards__item {
                 &:before {
                     counter-increment: sekcja;
@@ -101,5 +129,9 @@
     
     .o-header {
         margin-bottom: 60px;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            margin-bottom: 30px;
+        }
     }
 }

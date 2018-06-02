@@ -61,8 +61,7 @@
     }
 
     &__menu {
-       // @extend %anim-slow;
-
+    
         a {
             @extend %anim-slow;
             @extend %ulink;            

@@ -24,12 +24,11 @@
             weight: $bold;
         }
         
-        @media screen and ( max-width: $tablet_portrait + px ) {
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
             font-size: get-vw-tablet-portrait(22);
         }
         
         @media screen and ( max-width: $smartphone_portrait + px ) {
-            //font-size: get-vw-smartphone-portrait(22);
             font-size: rem(18);
         }
     }
@@ -78,6 +77,10 @@
             @media screen and ( max-width: $tablet + px ) {
                 width: grid(80, $tablet);
             }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                height: 3px;
+            }
         }
 
         &.anim--loaded {
@@ -85,6 +88,16 @@
             &:before {
                 transform: scale3d(1, 1, 1);
                 transform-origin: right center;
+                
+                @media screen and ( max-width: $smartphone + px ) {
+                    top: 20px;
+                    transform: scale3d(1, 1, 1) translate(0, 0);
+                }
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    top: 17px;
+                    transform: scale3d(1, 1, 1) translate(0, 0);
+                }
             }
         }
 

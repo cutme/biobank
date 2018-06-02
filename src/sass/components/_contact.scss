@@ -1,6 +1,43 @@
 .c-contact {
+
+    .o-indent {
+        @media screen and ( max-width: $tablet + px ) {
+           padding-left: 0; 
+        }
+        
+        &__col {
+            @media screen and ( max-width: $tablet + px ) {
+                width: 100%;
+            }
+
+            &--left {
+                @media screen and ( max-width: $tablet + px ) {
+                    height: 400px;
+                }
+            }
+
+            &--right {
+                max-width: none;
+                
+                @media screen and ( max-width: $tablet + px ) {
+                    padding: {
+                        right: 10px; 
+                        left: 10px;
+                    }
+                }
+            }
+        }
+        
+        &__item {
+            @media screen and ( max-width: $tablet + px ) {
+                flex-wrap: wrap;
+                padding-right: 0;
+            }
+        }
+    }
+
     .o-list {
-    
+
         a {
             @extend %ulink;
             
@@ -10,7 +47,13 @@
         }
 
         dd {
-            border-bottom: 1px solid white;
+            @media screen and ( min-width: $tablet + 1px ) {
+                border-bottom: 1px solid white;
+            }
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                width: 100%;
+            }
         }
         
         p {
@@ -31,15 +74,38 @@
 
                 &:after {
                     background-color: white;
+                    
+                    @media screen and ( max-width: $smartphone + px ) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                 }
             }
         }
         
         &__item {
-            width: 100%;
+            @media screen and ( min-width: $tablet + 1px ) {
+                padding-right: 20px;
+            }
+            
+            @media screen and ( min-width: $tablet + 1px ) {
+                width: 100%;
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                margin-bottom: 60px;
+            }
+
+            dd {
+                @media screen and ( max-width: $tablet + px ) {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+            
 
             &:last-child {
-                
+                width: 100%;
 
                 dd {
                     border: none;

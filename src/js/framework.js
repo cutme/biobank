@@ -201,7 +201,7 @@ const showonscroll = function() {
             let bottomOfObject = el[i].getBoundingClientRect().top + 50,
                 bottomOfWindow = window.innerHeight;
 
-            if ( bottomOfWindow > bottomOfObject + 100) {
+            if ( bottomOfWindow > bottomOfObject + 50) {
                 el[i].classList.add('anim--loaded');
 			}
 		}
@@ -211,7 +211,7 @@ const showonscroll = function() {
             let bottomOfObjectC = count[k].getBoundingClientRect().top + 50,
                 bottomOfWindowC = window.innerHeight;
 
-            if ( bottomOfWindowC > bottomOfObjectC + 100) {
+            if ( bottomOfWindowC > bottomOfObjectC + 50) {
                 if ( !count[k].classList.contains('anim--loaded') ) {
                     countit(count[k], count[k].getAttribute('data-count'));
                     count[k].classList.add('anim--loaded');

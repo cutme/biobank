@@ -4,8 +4,21 @@
     &__intro {
         margin-bottom: 110px;
         padding-left: 100px;
-        column-count: 2;
-        column-gap: 120px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: grid(100, $tablet);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            column-count: 2;
+            column-gap: 120px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            p {
+                margin-bottom: 40px;
+            }
+        }
     }
     
     .o-list {
