@@ -16,7 +16,14 @@ const minify = {
 
 module.exports = {
    entry: {
-        app: "./src/app.js"
+        aktualnosci: "./src/aktualnosci.js",
+        edukacja: "./src/edukacja.js",
+        index: "./src/index.js",
+        intranet: "./src/intranet.js",
+        kolekcje: "./src/kolekcje.js",
+        kontakt: "./src/kontakt.js",
+        media: "./src/kontakt.js",
+        onas: "./src/onas.js"
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -94,7 +101,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'index.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'index'],
             template: './src/index.html',
             minify: false
 		}),
@@ -102,7 +109,7 @@ module.exports = {
         new HtmlWebpackPlugin({
 		    filename: 'onas.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'onas'],
             template: './src/onas.html',
             minify: false
 		}),
@@ -110,7 +117,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'aktualnosci.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'aktualnosci'],
             template: './src/aktualnosci.html',
             minify: false
 		}),
@@ -118,7 +125,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'aktualnosci-single.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'aktualnosci'],
             template: './src/aktualnosci-single.html',
             minify: false
 		}),
@@ -126,7 +133,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'edukacja.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'edukacja'],
             template: './src/edukacja.html',
             minify: false
 		}),
@@ -134,7 +141,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'kolekcje.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'kolekcje'],
             template: './src/kolekcje.html',
             minify: false
 		}),
@@ -142,7 +149,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'kontakt.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'kontakt'],
             template: './src/kontakt.html',
             minify: false
 		}),
@@ -150,7 +157,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'intranet.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'intranet'],
             template: './src/intranet.html',
             minify: false
 		}),
@@ -158,9 +165,13 @@ module.exports = {
 		new HtmlWebpackPlugin({
 		    filename: 'media.html',
 		    cache: false,
-    		chunks: ['app'],
+    		chunks: ['commons', 'media'],
             template: './src/media.html',
             minify: false
 		}),
+		
+		new webpack.optimize.CommonsChunkPlugin({
+            name: 'commons',        
+        })
 	]
 };

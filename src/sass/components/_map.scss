@@ -1,0 +1,19 @@
+.c-map {
+    @extend %rel;
+    margin-bottom: 70px;
+    height: 100%;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%   {
+        background: white;
+    }
+    50% {
+        background: #efefef;
+    }
+    
+    100% {
+        background: white;
+    }
+}
